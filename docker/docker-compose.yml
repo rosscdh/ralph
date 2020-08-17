@@ -17,6 +17,7 @@ services:
         DATABASE_USER: ralph_ng
         DATABASE_PASSWORD: ralph_ng
         DATABASE_HOST: db
+        DATABASE_PORT: 3006
         REDIS_HOST: redis
         REDIS_PASSWORD: ""
         REDIS_PORT: 6379
@@ -26,7 +27,7 @@ services:
     image: allegro/ralph-static-nginx:latest
     restart: always
     ports:
-      - "80:80"
+      - "8006:80"
     volumes:
       - ralph_media:/opt/media
 
